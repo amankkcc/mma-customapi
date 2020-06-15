@@ -3,7 +3,7 @@
     <route url="/V1/mma/categories" method="GET">
         <service class="MMA\CustomApi\Api\CategoryManagementInterface" method="getTree" />
         <resources>
-            <resource ref="Magento_Catalog::categories" />
+            <resource ref="anonymous" />
         </resources>
     </route>
 
@@ -44,14 +44,14 @@
     <route url="/V1/mma/products/most-viewed/:limit" method="GET">
         <service class="MMA\CustomApi\Api\MostViewedRepositoryInterface" method="getList"/>
         <resources>
-            <resource ref="Magento_Catalog::products" />
+            <resource ref="anonymous" />
         </resources>
     </route>
 
     <route url="/V1/mma/products/best-seller/:limit" method="GET">
         <service class="MMA\CustomApi\Api\BestSellerRepositoryInterface" method="getList"/>
         <resources>
-            <resource ref="Magento_Catalog::products" />
+            <resource ref="anonymous" />
         </resources>
     </route>
 
@@ -65,21 +65,21 @@
     <route url="/V1/mma/products/new/:limit" method="GET">
         <service class="MMA\CustomApi\Api\NewProductsRepositoryInterface" method="getList"/>
         <resources>
-            <resource ref="Magento_Catalog::products" />
+            <resource ref="anonymous" />
         </resources>
     </route>
 
     <route url="/V1/mma/review/reviews/:productId" method="GET">
         <service class="MMA\CustomApi\Api\ReviewInterface" method="getReviewsList"/>
         <resources>
-            <resource ref="Magento_Review::reviews_all" />
+            <resource ref="anonymous" />
         </resources>
     </route>
 
     <route url="/V1/mma/rating/ratings/:store_id" method="GET">
         <service class="MMA\CustomApi\Api\ReviewInterface" method="getRatings"/>
         <resources>
-            <resource ref="Magento_Review::ratings" />
+            <resource ref="anonymous" />
         </resources>
     </route>
 
