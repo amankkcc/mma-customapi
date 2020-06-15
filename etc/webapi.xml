@@ -58,7 +58,7 @@
     <route url="/V1/mma/products/top-rated/:limit" method="GET">
         <service class="MMA\CustomApi\Api\TopRatedRepositoryInterface" method="getList"/>
         <resources>
-            <resource ref="Magento_Catalog::products" />
+            <resource ref="anonymous" />
         </resources>
     </route>
 
